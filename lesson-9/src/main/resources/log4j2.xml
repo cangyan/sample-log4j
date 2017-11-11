@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Properties>
+        <Property name="myPattern">%d %p %m%n</Property>
+    </Properties>
+    <Scripts>
+        <Script name="checkSunday" language="javascript"><![CDATA[
+            var result;
+            var sunday = 0;
+            var today = new Date();
+            var dayOfWeek = today.getDay();
+            if (dayOfWeek == sunday) {
+                result = true;
+            } else {
+                result = false;
+            }
+            result;
+        ]]></Script>
+    </Scripts>
+    <ScriptFilter>
+        <ScriptRef ref="checkSunday"/>
+    </ScriptFilter>
+    <Appenders>
+        <Console name="STDOUT">
+            <PatternLayout pattern="${myPattern}"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="Main" additivity="false">
+            <AppenderRef ref="STDOUT"/>
+        </Logger>
+        <Root>
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+</Configuration>
