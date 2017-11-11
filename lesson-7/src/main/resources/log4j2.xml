@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Properties>
+        <Property name="myPattern">%d %p %m%n</Property>
+    </Properties>
+    <Filters>
+        <RegexFilter regex=".*err.*"/>
+        <TimeFilter start="9:00:00" end="23:00:00"/>
+    </Filters>
+    <Appenders>
+        <Console name="STDOUT">
+            <PatternLayout pattern="${myPattern}"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="Main" additivity="false">
+            <AppenderRef ref="STDOUT"/>
+        </Logger>
+        <Root>
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+</Configuration>
