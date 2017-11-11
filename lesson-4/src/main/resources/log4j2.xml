@@ -2,6 +2,7 @@
 <Configuration>
     <Appenders>
         <Console name="STDOUT">
+            <PatternLayout pattern="%d %p %m%n"/>
         </Console>
     </Appenders>
     <Loggers>
