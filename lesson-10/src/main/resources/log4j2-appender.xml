@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Appenders>
+    <Console name="STDOUT">
+        <PatternLayout pattern="%d %p %m%n"/>
+    </Console>
+</Appenders>

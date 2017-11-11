@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns:xi="http://www.w3.org/2001/XInclude">
+    <Loggers>
+        <Root>
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+    <xi:include href="log4j2-appender.xml"/>
+</Configuration>
